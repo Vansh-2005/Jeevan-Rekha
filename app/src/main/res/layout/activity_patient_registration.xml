@@ -1,0 +1,205 @@
+<!-- res/layout/activity_patient_registration.xml -->
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="16dp"
+    android:fitsSystemWindows="true"
+    tools:context=".User_pannel.Authentication.PatientRegistrationActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Profile Photo (ImageView) -->
+            <ImageView
+                android:id="@+id/imageViewProfilePhoto"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/add_hospital"
+                android:contentDescription="Profile Photo"
+                android:scaleType="centerCrop" />
+
+            <!-- Choose Photo Button -->
+            <Button
+                android:id="@+id/buttonChoosePhoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageViewProfilePhoto"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:text="Choose Photo" />
+
+            <!-- Patient First Name -->
+            <EditText
+                android:id="@+id/editTextPatientFirstName"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@id/buttonChoosePhoto"
+                android:layout_marginTop="16dp"
+                android:paddingLeft="7dp"
+                android:background="@drawable/outline_border_background"
+                android:hint="First Name"
+                android:inputType="textPersonName" />
+
+            <!-- Patient Last Name -->
+            <EditText
+                android:id="@+id/editTextPatientLastName"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@id/editTextPatientFirstName"
+                android:layout_marginTop="16dp"
+                android:paddingLeft="7dp"
+                android:background="@drawable/outline_border_background"
+                android:hint="Last Name"
+                android:inputType="textPersonName" />
+
+            <!-- Date of Birth -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutDOB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editTextPatientLastName"
+                android:layout_marginTop="14dp"
+               >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editTextPatientDOB"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        android:hint="Date of Birth"
+                        android:focusable="true"
+                        android:background="@drawable/outline_border_background"
+                        android:clickable="true" />
+
+                    <!-- Calendar Icon -->
+                    <ImageView
+                        android:id="@+id/imageViewCalendar"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="8dp"
+                        android:contentDescription="Calendar"
+                        android:src="@drawable/calender_icon" />
+                </RelativeLayout>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <!-- Gender (RadioGroup) -->
+            <RadioGroup
+                android:id="@+id/radioGroupGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textInputLayoutDOB"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <!-- Radio buttons for gender selection -->
+                <RadioButton
+                    android:id="@+id/radioButtonMale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Male" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonFemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Female" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonOther"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Other" />
+
+            </RadioGroup>
+
+            <!-- Patient Email -->
+            <EditText
+                android:id="@+id/editTextPatientEmail"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@id/radioGroupGender"
+                android:layout_marginTop="14dp"
+                android:paddingLeft="7dp"
+                android:hint="Email"
+                android:background="@drawable/outline_border_background"
+                android:inputType="textEmailAddress" />
+
+            <!-- Patient Password -->
+            <EditText
+                android:id="@+id/editTextPatientPassword"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@id/editTextPatientEmail"
+                android:layout_marginTop="16dp"
+                android:hint="Password"
+                android:paddingLeft="7dp"
+                android:background="@drawable/outline_border_background"
+                android:inputType="textPassword" />
+
+            <!-- Phone Number -->
+            <EditText
+                android:id="@+id/editTextPatientPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@id/editTextPatientPassword"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/outline_border_background"
+                android:hint="Mobile Number"
+                android:paddingLeft="7dp"
+                android:inputType="phone" />
+
+            <EditText
+                android:id="@+id/editTextPatientAdress"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@id/editTextPatientPhoneNumber"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/outline_border_background"
+                android:hint="Address"
+                android:paddingLeft="7dp"
+                android:inputType="textPostalAddress" />
+
+            <!-- Hospital Name (Spinner) -->
+            <Spinner
+                android:id="@+id/spinnerHospitalName"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:paddingLeft="7dp"
+                android:background="@drawable/spinner_background"
+                android:layout_below="@id/editTextPatientAdress"
+                android:layout_marginTop="16dp" />
+
+            <!-- Register Button -->
+            <Button
+                android:id="@+id/buttonRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/spinnerHospitalName"
+                android:layout_marginTop="16dp"
+                android:text="Register" />
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

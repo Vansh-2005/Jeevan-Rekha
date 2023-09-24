@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "770546883184",
+    "project_id": "jeevan-rekha-30b48",
+    "storage_bucket": "jeevan-rekha-30b48.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:770546883184:android:a0a2ff9ad51fe86e8ff2b5",
+        "android_client_info": {
+          "package_name": "com.vansh.hospitalmanagement1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCck0gm5xqus4mD2PQx-UfCWChZ_YMNFyQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

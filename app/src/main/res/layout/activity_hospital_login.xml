@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="16dp"
+    android:fitsSystemWindows="true"
+    tools:context=".Hospital_Panel.Authentication.HospitalLoginActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <!-- res/layout/activity_hospital_login.xml -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:padding="16dp">
+
+            <!-- Hospital Logo (if applicable) -->
+
+            <!-- Hospital Email -->
+            <EditText
+                android:id="@+id/editTextHospitalEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:inputType="textEmailAddress" />
+
+            <!-- Hospital Password -->
+            <EditText
+                android:id="@+id/editTextHospitalPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editTextHospitalEmail"
+                android:layout_marginTop="16dp"
+                android:hint="Password"
+                android:inputType="textPassword" />
+
+            <!-- Hospital Login Button -->
+            <Button
+                android:id="@+id/buttonHospitalLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editTextHospitalPassword"
+                android:layout_marginTop="16dp"
+                android:text="Login" />
+
+            <!-- Hospital Registration Button -->
+            <Button
+                android:id="@+id/buttonHospitalRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/buttonHospitalLogin"
+                android:layout_marginTop="16dp"
+                android:text="Register" />
+
+            <!-- Forgot Password Button -->
+            <TextView
+                android:id="@+id/textViewForgotPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/buttonHospitalRegister"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:text="Forgot Password?"
+                android:textColor="@color/link_blue" />
+        </RelativeLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
